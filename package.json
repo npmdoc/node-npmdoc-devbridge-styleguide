@@ -1,1 +1,39 @@
-{     "devDependencies": {         "devbridge-styleguide": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-devbridge-styleguide",     "homepage": "https://github.com/npmdoc/node-npmdoc-devbridge-styleguide",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-devbridge-styleguide.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [devbridge-styleguide (v0.4.17)](https://www.devbridge.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-devbridge-styleguide.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-devbridge-styleguide) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-devbridge-styleguide.svg)](https://travis-ci.org/npmdoc/node-npmdoc-devbridge-styleguide)",
+    "devDependencies": {
+        "devbridge-styleguide": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-devbridge-styleguide",
+    "keywords": [
+        "documentation",
+        "devbridge-styleguide"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_devbridge_styleguide.js",
+    "name": "npmdoc-devbridge-styleguide",
+    "nameAlias": "npmdoc_devbridge_styleguide",
+    "nameOriginal": "npmdoc-devbridge-styleguide",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-devbridge-styleguide.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
